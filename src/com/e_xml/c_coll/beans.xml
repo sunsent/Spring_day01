@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+    <集合注入是用 </property>子标签
+    Map:<map> <entry key="a" value="阿"></entry>
+    Properties:<props>
+    普通数据:value
+    引用数据:ref
+    -->
+    <bean id="collDataID" class="com.e_xml.c_coll.CollData">
+        <property name="arrayData">
+            <array>
+                <value>A</value>
+                <value>B</value>
+                <value>C</value>
+            </array>
+        </property>
+        <property name="listData">
+            <list>
+                <value>A</value>
+                <value>B</value>
+                <value>C</value>
+            </list>
+        </property>
+        <property name="setData">
+            <set>
+                <value>A</value>
+                <value>B</value>
+                <value>C</value>
+            </set>
+        </property>
+        <property name="mapData">
+            <map >
+                <entry key="a" value="阿"></entry>
+                <entry key="b" value="吧"></entry>
+                <entry key="c" value="从"></entry>
+            </map>
+        </property>
+        <property name="propsData">
+            <props>
+                <prop key="A">阿</prop>
+                <prop key="B">阿</prop>
+                <prop key="C">阿</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

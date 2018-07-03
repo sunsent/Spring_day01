@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+    </constructor-arg>配置构造方法的一个参数
+    name:参数名,不常用
+    vlaue:普通数据类型
+    ref:引用数据,一般是另一个bean的 id
+    index:参数索引号,从0开始
+    type: 确定参数类型
+    -->
+    <bean id="userID" class="com.e_xml.a_constructor.User">
+        <constructor-arg index="0" value="Tom" type="java.lang.String"></constructor-arg>
+        <constructor-arg index="1" value="99" type="java.lang.Integer"></constructor-arg>
+    </bean>
+</beans>

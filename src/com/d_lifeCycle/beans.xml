@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+    -->
+
+    <bean id="UserServiceID" class="com.d_lifeCycle.UserServiceImp" init-method="myInit" destroy-method="myDestroy"></bean>
+    <!--将后处理的实现类注册给Spring-->
+    <bean class="com.d_lifeCycle.MyBeanPostProcessor"></bean>
+</beans>

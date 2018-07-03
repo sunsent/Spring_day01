@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--配置service
+    bean:配置要创建的对象
+    id:用于获取Spring容器中的实例
+    -->
+
+    <bean id="UserServiceImpID" class="com.a_IOC.UserServiceImp"></bean>
+</beans>

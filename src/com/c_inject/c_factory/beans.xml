@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--创建工厂实例
+    -->
+    <bean id="MyBeanFactoryID" class="com.c_inject.c_factory.MyBeanFactory" ></bean>
+    <!--用createUserService获取userService -->
+    <bean id="UserServiceID" factory-bean="MyBeanFactoryID" factory-method="createUserService"></bean>
+</beans>

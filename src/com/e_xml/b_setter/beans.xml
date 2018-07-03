@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+    </setter方法注入
+    name:参数名
+    vlaue:普通数据类型
+    ref:引用数据,一般是另一个bean的 id
+
+    -->
+    <bean id="personID" class="com.e_xml.b_setter.Person">
+        <property name="age" value="88"></property>
+        <property name="pname">
+            <value>Tom</value>
+        </property>
+        <property name="homeAddr" ref="homeAddrID"></property>
+        <property name="cmpAddr" >
+            <ref bean="cmpAddrID"/>
+        </property>
+    </bean>
+    <bean id="homeAddrID" class="com.e_xml.b_setter.Address">
+        <property name="addr" value="北京"></property>
+        <property name="tel" value="111"></property>
+    </bean>
+    <bean id="cmpAddrID" class="com.e_xml.b_setter.Address">
+        <property name="addr" value="上海"></property>
+        <property name="tel" value="222"></property>
+    </bean>
+</beans>
